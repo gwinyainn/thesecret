@@ -1,4 +1,5 @@
 import Link from "next/link";
+import JoinForm from "./join-form";
 
 const Mark = ({ reverse = false }: { reverse?: boolean }) => (
   <span className={`mark ${reverse ? "markReverse" : ""}`} aria-hidden="true">
@@ -134,11 +135,7 @@ export default function Home() {
         <p className="eyebrow gold">JOIN THE SECRET</p>
         <h2>Be the first to know.</h2>
         <p>Private releases. Tastings. Places worth discovering.</p>
-        <form className="joinForm">
-          <label className="srOnly" htmlFor="email">Email address</label>
-          <input id="email" type="email" placeholder="EMAIL ADDRESS" required />
-          <button type="submit">KEEP ME INFORMED</button>
-        </form>
+        <JoinForm />
       </section>
 
       <footer>

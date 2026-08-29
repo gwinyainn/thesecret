@@ -112,9 +112,29 @@ button, input { font: inherit; }
 .joinSection { padding: 140px 8vw; text-align: center; background: var(--black); }
 .joinSection > .mark { margin-bottom: 70px; transform: scale(1.6); }
 .joinSection > p:not(.eyebrow) { font-family: var(--display); font-size: 21px; opacity: .65; }
-.joinForm { max-width: 650px; margin: 58px auto 0; display: flex; border-bottom: 1px solid rgba(243,235,221,.38); }
-.joinForm input { flex: 1; padding: 18px 0; border: 0; outline: 0; color: var(--ivory); background: transparent; font-size: 10px; letter-spacing: .22em; }
-.joinForm button { padding: 18px 0 18px 30px; border: 0; color: var(--gold); background: transparent; font-size: 9px; letter-spacing: .2em; cursor: pointer; }
+.joinForm { max-width: 980px; margin: 64px auto 0; text-align: left; }
+.joinFormHeading { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
+.joinFormHeading span { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid rgba(176,138,87,.55); border-radius: 50%; color: var(--gold); font-size: 8px; letter-spacing: .12em; }
+.joinFormHeading p { margin: 0; color: rgba(243,235,221,.66); font-size: 9px; letter-spacing: .24em; text-transform: uppercase; }
+.joinFields { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 22px; }
+.joinField { border-bottom: 1px solid rgba(243,235,221,.34); }
+.joinField:focus-within { border-color: var(--gold); }
+.joinField label, .joinVerifyForm > label { display: block; margin-bottom: 4px; color: var(--gold); font-size: 8px; letter-spacing: .22em; text-transform: uppercase; }
+.joinForm input { width: 100%; padding: 15px 0 18px; border: 0; outline: 0; color: var(--ivory); background: transparent; font-size: 10px; letter-spacing: .16em; }
+.joinForm input::placeholder { color: rgba(243,235,221,.38); }
+.joinSubmit, .joinCodeRow button { width: 100%; margin-top: 34px; padding: 19px 28px; border: 1px solid rgba(176,138,87,.72); color: var(--ivory); background: rgba(176,138,87,.08); font-size: 9px; letter-spacing: .24em; cursor: pointer; transition: background .3s ease, color .3s ease; }
+.joinSubmit:hover, .joinCodeRow button:hover { color: var(--black); background: var(--gold); }
+.joinForm button:disabled { cursor: wait; opacity: .6; }
+.joinConsent { max-width: 620px; margin: 18px auto 0 !important; text-align: center; font-family: var(--sans) !important; font-size: 9px !important; line-height: 1.6; letter-spacing: .06em; opacity: .42 !important; }
+.joinMessage { min-height: 18px; margin: 14px 0 0 !important; color: var(--champagne); text-align: center; font-family: var(--sans) !important; font-size: 10px !important; line-height: 1.5; opacity: 1 !important; }
+.joinVerifyForm { max-width: 620px; }
+.joinCodeRow { display: grid; grid-template-columns: 1fr auto; align-items: end; border-bottom: 1px solid rgba(243,235,221,.34); }
+.joinCodeRow input { font-family: var(--display); font-size: 26px; letter-spacing: .32em; }
+.joinCodeRow button { width: auto; min-width: 190px; margin: 0; border: 0; color: var(--gold); background: transparent; }
+.joinTextButton { display: block; margin: 18px auto 0; padding: 8px; border: 0; color: rgba(243,235,221,.55); background: transparent; font-size: 9px; letter-spacing: .14em; text-decoration: underline; text-underline-offset: 5px; cursor: pointer; }
+.joinSuccess { max-width: 620px; margin: 58px auto 0; padding: 36px; border: 1px solid rgba(176,138,87,.4); text-align: center; }
+.joinSuccess span { display: inline-grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); }
+.joinSuccess p { margin: 20px 0 0; font-family: var(--display); font-size: 22px; }
 
 footer { min-height: 280px; padding: 70px 6vw; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: end; border-top: 1px solid rgba(243,235,221,.12); background: #0b0b0a; font-size: 9px; letter-spacing: .16em; }
 footer > div:first-child p { font-family: var(--display); font-size: 22px; letter-spacing: .2em; }
@@ -165,6 +185,10 @@ footer > div:last-child { justify-self: end; display: flex; gap: 30px; }
   .giftItem { grid-column: auto; grid-template-columns: 1fr; }
   .stockistSection { grid-template-columns: 1fr; padding: 100px 28px; }
   .journalGrid { grid-template-columns: 1fr 1fr; }
+  .joinSection { padding: 100px 24px; }
+  .joinFields { grid-template-columns: 1fr; gap: 24px; }
+  .joinCodeRow { grid-template-columns: 1fr; }
+  .joinCodeRow button { width: 100%; margin-top: 8px; padding: 18px 0; }
   footer { grid-template-columns: 1fr; gap: 40px; align-items: start; }
   footer > div:nth-child(2), footer > div:last-child { justify-self: start; }
   .productHeroCopy { padding: 100px 28px; }
